@@ -1,9 +1,15 @@
+import WelcomeMessage from "@/components/WelcomeMessage";
+import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
+import { Suspense } from "react";
+import Loading from "./Loading";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
-  );
+    <>
+      <Suspense fallback={<Loading />}>
+        <WelcomeMessage />
+      </Suspense>
+    </>
+  )
 }
