@@ -4,10 +4,12 @@ import "./globals.css";
 import {
   ClerkProvider
 } from '@clerk/nextjs'
+import Navbar from "@/components/Navbar";
+import { Separator } from "@/components/ui/separator";
 
 
 const inter = Inter({
- 
+
   subsets: ["latin"],
 });
 
@@ -28,9 +30,11 @@ export default function RootLayout({
         <body
           className={`${inter.className} antialiased`}
         >
-         <div className="min-h-screen flex w-full flex-col items-center dark:bg-black">
-         {children}
-         </div>
+          <div className="min-h-screen flex w-full flex-col items-center dark:bg-black">
+            <Navbar />
+            <Separator />
+            {children}
+          </div>
         </body>
       </html>
     </ClerkProvider>
