@@ -7,9 +7,9 @@ const WelcomeMessage = async () => {
         return <div>Error</div>
     }
     return (
-        <div>
+        <div className='flex w-full'>
             <h1 className='text-4xl font-semibold bg-gradient-to-r from-green-600 to-orange-400 bg-clip-text text-transparent'>
-                Welcome, {user?.firstName} {user?.lastName}</h1>
+                Welcome,<br /> {user?.firstName} {user?.lastName}</h1>
         </div>
     )
 }
