@@ -28,7 +28,9 @@ export default function RootLayout({
         <body
           className={`${inter.className} antialiased`}
         >
-          {children}
+         <div className="min-h-screen flex w-full flex-col items-center dark:bg-black">
+         {children}
+         </div>
         </body>
       </html>
     </ClerkProvider>
